@@ -1,0 +1,96 @@
+buildscript {
+    ext.kotlin_version = '1.9.22'
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.0.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.23"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    
+    // Apply to all Android plugin applications
+    afterEvaluate { project ->
+        if (project.hasProperty('android')) {
+            // Check if buildTypes exists before accessing it
+            if (project.android.hasProperty('buildTypes')) {
+                project.android.buildTypes.all { buildType ->
+                    if (buildType.hasProperty('crunchPngs')) {
+                        buildType.crunchPngs false
+                    }
+                }
+            }
+            
+            // Apply AAPT2 workarounds for all Android projects
+            if (project.hasProperty('android') && project.android.hasProperty('aaptOptions')) {
+                project.android.aaptOptions.cruncherEnabled = false
+                if (project.android.aaptOptions.hasProperty('useNewCruncher')) {
+                    project.android.aaptOptions.useNewCruncher = false
+                }
+            }
+        }
+    }
+}
+
+// Fix for Flutter integration with proper quoting for spaces in paths
+rootProject.buildDir = file("../build")
+subprojects {
+    project.buildDir = file("${rootProject.buildDir}/${project.name}")
+}
+
+// Ensure projects are evaluated in the right order
+gradle.projectsEvaluated {
+    // No property modifications here, only dependency management
+}
+
+// Output handler to help Flutter find APK
+gradle.buildFinished { result ->
+    def buildDir = rootProject.buildDir
+    def appBuildDir = new File(buildDir, "app")
+    def apkDir = new File(appBuildDir, "outputs/apk")
+    
+    println "=============== APK BUILD DIAGNOSTICS ==============="
+    if (result.failure) {
+        println "BUILD FAILED with error: ${result.failure.message}"
+    } else {
+        println "BUILD SUCCEEDED"
+    }
+    
+    // Check standard APK output directory
+    if (apkDir.exists()) {
+        println "APK directory found at: ${apkDir.absolutePath}"
+        apkDir.eachFileRecurse { file ->
+            if (file.name.endsWith('.apk')) {
+                println "APK found: ${file.absolutePath}"
+            }
+        }
+    } else {
+        println "WARNING: APK directory not found at expected location: ${apkDir.absolutePath}"
+    }
+    
+    println "=====================================================\n"
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
+
+// Add a task to monitor and restart AAPT2 if it hangs
+gradle.taskGraph.afterTask { task ->
+    if (task.name.contains('processDebugResources') || task.name.contains('processReleaseResources')) {
+        if (task.state.failure) {
+            println "Resource processing task ${task.name} failed. Attempting to clean AAPT2 processes..."
+            
+            // This is a simple logging message since we can't directly kill processes from Gradle safely
+            println "TIP: If build continues to fail, manually kill any aapt2 processes and try again."
+        }
+    }
+}

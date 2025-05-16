@@ -1,0 +1,45 @@
+pluginManagement {
+    // Define a method to load the Flutter SDK path from local.properties
+    def flutterSdkPath = {
+        def properties = new Properties()
+        // Load the local.properties file to retrieve the Flutter SDK path
+        file("local.properties").withInputStream { properties.load(it) }
+        def sdkPath = properties.getProperty("flutter.sdk")
+        assert sdkPath != null, "flutter.sdk not set in local.properties. Please configure it in local.properties." [[9]]
+        return sdkPath
+    }()
+
+    // Include the Flutter tools Gradle plugin
+    includeBuild("$flutterSdkPath/packages/flutter_tools/gradle")
+
+    // Define repositories for Gradle plugins
+    repositories {
+        gradlePluginPortal() // Official Gradle plugin repository
+        google()             // Google Maven repository
+        mavenCentral()       // Central Maven repository
+    }
+}
+
+// Apply required plugins
+plugins {
+    id "dev.flutter.flutter-plugin-loader" version "1.0.0"
+    id "com.android.application" version "8.2.0" apply false
+    id "org.jetbrains.kotlin.android" version "1.9.22" apply false
+}
+
+// Fix for shared_preferences plugin (disable resource verification)
+gradle.beforeProject { project ->
+    if (project.name == 'shared_preferences_android' && project.hasProperty('android')) {
+        project.tasks.whenTaskAdded { task ->
+            if (task.name.contains('verifyReleaseResources')) {
+                task.enabled = false
+            }
+        }
+    }
+}
+
+// Include the app module
+include ":app"
+
+// Set the root project name
+rootProject.name = "android"

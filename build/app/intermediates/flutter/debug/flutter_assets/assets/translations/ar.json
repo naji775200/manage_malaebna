@@ -1,0 +1,701 @@
+{
+  "app": {
+    "name": "إدارة ملاعبنا",
+    "tagline": "أدر ملاعب كرة القدم الخاصة بك بسهولة"
+  },
+  "common": {
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "close": "إغلاق",
+    "next": "التالي",
+    "skip": "تخطي",
+    "get_started": "ابدأ الآن",
+    "view_all": "عرض الكل",
+    "not_available": "غير متوفر",
+    "field": "ملعب",
+    "continue": "متابعة",
+    "error": "حدث خطأ",
+    "edit": "تعديل",
+    "delete": "حذف",
+    "got_it": "فهمت!"
+  },
+  "navigation": {
+    "home": "الرئيسية",
+    "fields": "الملاعب",
+    "reports": "التقارير",
+    "payment": "المدفوعات",
+    "profile": "الملف",
+    "requests": "الطلبات"
+  },
+  "onboarding": {
+    "welcome": {
+      "title": "مرحباً بك في ملاعبنا",
+      "description": "ابحث واحجز الملاعب الرياضية بسهولة مع تطبيق إدارة الملاعب"
+    },
+    "search": {
+      "title": "ابحث عن الملاعب المثالية",
+      "description": "ابحث عن الملاعب المتاحة حسب الموقع والوقت وتفضيلات أخرى"
+    },
+    "book": {
+      "title": "أدر ملعبك",
+      "description": "أدر الحجوزات والطلبات وتتبع أداء ملعبك بسهولة"
+    }
+  },
+  "auth": {
+    "login": "تسجيل الدخول",
+    "phone_number": "رقم الهاتف",
+    "verification_code": "رمز التحقق",
+    "verification_title": "رمز التحقق",
+    "verification_sent_to": "تم إرسال رمز التحقق إلى",
+    "verification_info": "الرجاء إدخال الرمز المكون من 4 أرقام المرسل إلى هاتفك",
+    "verification_info_existing": "مرحباً بعودتك! الرجاء إدخال رمز التحقق للمتابعة مع حسابك الحالي",
+    "didnt_receive_code": "لم تستلم الرمز؟",
+    "resend_in": "إعادة الإرسال خلال {seconds} ثانية",
+    "resend_code": "إعادة إرسال الرمز",
+    "verify": "تحقق من الرمز",
+    "welcome": "مرحباً بك",
+    "welcome_back": "مرحباً بعودتك، {name}! لقد أرسلنا إليك رمز التحقق.",
+    "enter_phone_prompt": "يرجى إدخال رقم الهاتف لتسجيل الدخول أو التسجيل",
+    "terms_agreement": "بالضغط على \"التالي\" ، فإنك توافق على شروط الخدمة وسياسة الخصوصية الخاصة بنا",
+    "name": "الإسم",
+    "enter_name": "أدخل إسمك",
+    "phone": "الهاتف",
+    "login_success": "تم تسجيل الدخول بنجاح",
+    "account_type_stadium": "نوع حسابك هو مدير الملعب، وسيتم استخدامه لتسجيل الدخول هذا.",
+    "account_type_owner": "نوع حسابك هو مالك الملعب، وسيتم استخدامه لتسجيل الدخول هذا.",
+    "account_type_locked": "نوع الحساب مقفل",
+    "account_creation_error": "قد تكون هناك مشكلة في إنشاء الحساب. يرجى الاتصال بالدعم.",
+    "check_business": {
+      "title": "تم استلام طلبك",
+      "description": "سنتواصل معك في أقرب وقت ممكن، لذا كن مستعداً."
+    },
+    "user_type": {
+      "owner": "مالك الملعب",
+      "stadium": "مدير الملعب",
+      "title": "نوع المستخدم"
+    },
+    "test_mode": "وضع الاختبار",
+    "test_code": "استخدام الرمز الافتراضي: 0000"
+  },
+  "profile": {
+    "settings": "الإعدادات",
+    "account": "الحساب",
+    "language": "اللغة",
+    "theme": "المظهر",
+    "notifications": "الإشعارات",
+    "enabled": "مفعّل",
+    "disabled": "معطّل",
+    "edit_profile": "تعديل الملف الشخصي",
+    "select_language": "اختيار اللغة",
+    "select_theme": "اختيار المظهر",
+    "stadium_management": "إدارة الملعب",
+    "stadium_management_desc": "إدارة تفاصيل الملعب والملاعب والحجوزات",
+    "working_hours": "ساعات العمل والإجازات",
+    "working_hours_desc": "إدارة توفر الملعب",
+    "reports": "التقارير والتحليلات",
+    "reports_desc": "عرض مقاييس أداء الملعب",
+    "payment": "سجل المدفوعات",
+    "payment_desc": "عرض وإدارة المدفوعات والمعاملات المستلمة",
+    "support": "الدعم",
+    "feedback": "التعليقات",
+    "terms": "شروط الخدمة",
+    "privacy": "سياسة الخصوصية",
+    "logout": "تسجيل الخروج",
+    "version": "الإصدار",
+    "version_number": "الإصدار 1.0.0",
+    "matches": "المباريات",
+    "rating": "التقييم",
+    "friends": "الأصدقاء",
+    "feedback_form": {
+      "title": "إرسال تعليق",
+      "complaint": "شكوى",
+      "suggestion": "اقتراح",
+      "complaint_hint": "أخبرنا ما الخطأ الذي حدث...",
+      "suggestion_hint": "شارك أفكارك معنا...",
+      "validation_empty": "الرجاء إدخال تعليقك",
+      "validation_short": "يجب أن يتكون التعليق من 10 أحرف على الأقل",
+      "submit": "إرسال التعليق",
+      "thank_you": "شكراً لتعليقك!"
+    }
+  },
+  "theme": {
+    "light": "فاتح",
+    "dark": "داكن",
+    "system": "النظام"
+  },
+  "stadium_management": {
+    "welcome_manager": "مرحباً بك، مدير الملعب",
+    "welcome_message": "أدر ملعبك بكفاءة من خلال لوحة التحكم هذه",
+    "quick_stats": "إحصائيات سريعة",
+    "total_fields": "إجمالي الملاعب",
+    "bookings_today": "حجوزات اليوم",
+    "pending_requests": "الطلبات المعلقة",
+    "revenue_today": "إيرادات اليوم",
+    "recent_bookings": "الحجوزات الأخيرة",
+    "revenue_overview": "نظرة عامة على الإيرادات",
+    "chart_placeholder": "مخطط الإيرادات",
+    "last_week": "الأسبوع الماضي",
+    "this_week": "هذا الأسبوع",
+    "no_pending_matches": "لا توجد طلبات معلقة",
+    "no_pending_matches_desc": "ليس لديك أي طلبات مباراة معلقة في الوقت الحالي",
+    "no_accepted_matches": "لا توجد مباريات موافق عليها",
+    "no_accepted_matches_desc": "ليس لديك أي طلبات مباريات تمت الموافقة عليها في الوقت الحالي",
+    "no_completed_matches": "لا توجد مباريات مكتملة",
+    "no_completed_matches_desc": "ليس لديك أي سجلات مباريات مكتملة في الوقت الحالي",
+    "pending": "قيد الانتظار",
+    "accepted": "تمت الموافقة",
+    "completed": "مكتملة",
+    "width": "العرض",
+    "length": "الطول",
+    "team1": "الفريق 1",
+    "team2": "الفريق 2",
+    "field_size": "مساحة الملعب",
+    "max_players": "أقصى عدد للاعبين في كل فريق",
+    "square_meter": "متر مربع",
+    "add_field_image": "إضافة صورة للملعب (بحد أقصى 5)",
+    "max_images": "الحد الأقصى (5)",
+    "images": "الصور",
+    "max_images_reached": "تم الوصول إلى الحد الأقصى للصور (5)",
+    "tabs": {
+      "reports": "التقارير",
+      "requests": "الطلبات",
+      "pending": "الطلبات المعلقة",
+      "accepted": "المباريات الموافق عليها",
+      "completed": "المباريات المكتملة"
+    },
+    "match_date": "التاريخ",
+    "match_time": "الوقت",
+    "match_field": "الملعب",
+    "match_players": "اللاعبون",
+    "requested_by": "مطلوب من قبل",
+    "reject": "رفض",
+    "approve": "موافقة",
+    "approve_match": "الموافقة على المباراة",
+    "approve_match_confirmation": "هل أنت متأكد من موافقتك على المباراة '{matchName}' في ملعب '{fieldName}'؟",
+    "reject_match": "رفض المباراة",
+    "reject_match_confirmation": "هل أنت متأكد من رفضك للمباراة '{matchName}'؟",
+    "rejection_reason": "سبب الرفض",
+    "rejection_reason_hint": "قدم سبباً لرفض طلب المباراة هذا",
+    "match_approved": "تمت الموافقة على طلب المباراة بنجاح",
+    "match_rejected": "تم رفض طلب المباراة بنجاح",
+    "select_period": "اختر الفترة",
+    "today": "اليوم",
+    "this_month": "هذا الشهر",
+    "this_year": "هذه السنة",
+    "detailed_report": "تقرير مفصل",
+    "no_reports": "لا توجد تقارير متاحة",
+    "no_reports_desc": "لا توجد تقارير متاحة للفترة المحددة",
+    "total_bookings": "إجمالي الحجوزات",
+    "total_revenue": "إجمالي الإيرادات",
+    "bookings_count": "{count} حجز",
+    "add_field": "إضافة ملعب",
+    "edit_field": "تعديل الملعب",
+    "field_name": "اسم الملعب",
+    "field_type": "نوع الملعب",
+    "field_capacity": "سعة الملعب",
+    "field_price": "سعر الملعب",
+    "field_availability": "حالة التوفر",
+    "available": "متاح",
+    "booked": "محجوز",
+    "maintenance": "صيانة",
+    "delete_field": "حذف الملعب",
+    "delete_field_confirmation": "هل أنت متأكد من رغبتك في حذف {fieldName}؟",
+    "no_fields": "لا توجد ملاعب متاحة",
+    "add_fields_hint": "أضف ملاعب إلى ملعبك لبدء إدارتها",
+    "image_added_success": "تمت إضافة الصورة بنجاح"
+  },
+  "stadium_profile": {
+    "title": "ملف الملعب",
+    "overview": "نظرة عامة",
+    "location": "الموقع",
+    "description": "الوصف",
+    "opening_hours": "ساعات العمل",
+    "manage_working_hours": "إدارة ساعات العمل",
+    "contact_info": "معلومات الاتصال",
+    "phone": "الهاتف",
+    "phone_format": "مثال: xxxxxxxxx 966+",
+    "email": "البريد الإلكتروني",
+    "website": "الموقع الإلكتروني",
+    "services": "الخدمات",
+    "available_fields": "الملاعب المتاحة",
+    "no_fields": "لا توجد ملاعب متاحة",
+    "per_hour": "في الساعة",
+    "statistics": "الإحصائيات",
+    "total_fields": "إجمالي الملاعب",
+    "bookings_today": "حجوزات اليوم",
+    "reviews": "التقييمات",
+    "edit_profile": "تعديل الملف",
+    "open_now": "مفتوح الآن",
+    "closed": "مغلق",
+    "name": "الاسم",
+    "hours": "الساعات",
+    "capacity": "السعة",
+    "type": "النوع",
+    "change_image": "تغيير الصورة",
+    "image_upload_unavailable": "خاصية تحميل الصور غير متاحة في هذا العرض التوضيحي",
+    "update_success": "تم تحديث ملف الملعب بنجاح",
+    "description_hint": "قدم وصفاً مفصلاً لملعبك",
+    "price_range": "نطاق السعر",
+    "price_range_hint": "مثال: 100-500 ريال",
+    "address": "العنوان",
+    "city": "المدينة",
+    "postal_code": "الرمز البريدي",
+    "sport_type": "نوع الرياضة",
+    "basic_info": "المعلومات الأساسية",
+    "processing_image": "جاري معالجة الصورة...",
+    "image_processing_failed": "فشل في معالجة الصورة",
+    "stadium_id_missing": "معرف الملعب غير موجود",
+    "image_upload_error": "خطأ في تحميل الصورة",
+    "current_coordinates": "الإحداثيات الحالية",
+    "location_updated": "تم تحديث الموقع بنجاح",
+    "location_error": "خطأ في تحديث الموقع",
+    "select_on_map": "تحديد على الخريطة",
+    "search_services": "البحث عن الخدمات...",
+    "no_search_results": "لا توجد خدمات",
+    "no_services_selected": "لم يتم اختيار أي خدمات",
+    "selected_services": "الخدمات المختارة",
+    "district": "الحي"
+  },
+  "stadium": {
+    "per_hour": "في الساعة"
+  },
+  "notifications": {
+    "title": "الإشعارات",
+    "mark_all_read": "تحديد الكل كمقروء",
+    "no_notifications": "لا توجد إشعارات",
+    "check_back_later": "ليس لديك أي إشعارات حتى الآن. تحقق لاحقًا!",
+    "deleted": "تم حذف الإشعار",
+    "just_now": "الآن",
+    "minutes_ago": "دقيقة مضت",
+    "hours_ago": "ساعة مضت",
+    "days_ago": "يوم مضى",
+    "close": "إغلاق"
+  },
+  "working_hours": {
+    "save": "حفظ",
+    "unsaved_changes": " يوجد تغييرات يجب حفظها",
+    "frequency": {
+      "once": "مرة واحدة",
+      "daily": "يومي",
+      "weekly": "أسبوعي"
+    },
+    "title": "ساعات العمل و الإجازات",
+    "subtitle": "تحديد ساعات عمل الملعب و الإجازات",
+    "days": {
+      "monday": "الإثنين",
+      "tuesday": "الثلاثاء",
+      "wednesday": "الأربعاء",
+      "thursday": "الخميس",
+      "friday": "الجمعة",
+      "saturday": "السبت",
+      "sunday": "الأحد"
+    },
+    "status": {
+      "open": "مفتوح",
+      "closed": "مغلق"
+    },
+    "time": {
+      "start": "وقت البدء",
+      "end": "وقت الإنتهاء",
+      "all_day": "طوال اليوم"
+    },
+    "time_off": {
+      "title": "فترات الإغلاق",
+      "subtitle": "إدارة فترات إغلاق الملعب والساعات الخاصة",
+      "add_new": "إضافة فترة إغلاق",
+      "event_title": "العنوان",
+      "reason": "السبب",
+      "date": "التاريخ",
+      "start_date": "تاريخ البدء",
+      "end_date": "تاريخ الإنتهاء",
+      "applies_to": "يطبق على",
+      "entire_stadium": "الملعب بأكمله",
+      "specific_fields": "ملاعب محددة",
+      "recurring": "متكرر",
+      "frequency": "التكرار",
+      "specific_date": "تاريخ محدد",
+      "days_of_week": "أيام الأسبوع",
+      "recurring_end": "تاريخ انتهاء التكرار",
+      "no_end_date": "بدون تاريخ انتهاء",
+      "select_fields": "اختيار الملاعب",
+      "empty_state": "لا توجد فترات إغلاق مجدولة",
+      "delete_confirm": "هل أنت متأكد من حذف فترة الإغلاق هذه؟",
+      "save_success": "تم حفظ فترة الإغلاق بنجاح",
+      "no_time_off": "لا توجد فترات إغلاق",
+      "select_days": "اختيار الأيام"
+    },
+    "actions": {
+      "apply_to_all": "تطبيق على جميع الأيام",
+      "reset": "إعادة تعيين",
+      "copy_weekdays": "نسخ أيام الأسبوع",
+      "copy_weekend": "نسخ عطلة نهاية الأسبوع",
+      "save": "حفظ ساعات العمل",
+      "discard": "تجاهل التغييرات"
+    },
+    "messages": {
+      "saved": "تم حفظ ساعات العمل بنجاح",
+      "error": "خطأ في حفظ ساعات العمل",
+      "saving": "جاري حفظ ساعات العمل...",
+      "confirm_discard": "هل أنت متأكد من تجاهل التغييرات؟",
+      "end_before_start": "لا يمكن أن يكون وقت الإنتهاء قبل وقت البدء",
+      "time_off_added": "تمت إضافة فترة الإغلاق بنجاح",
+      "time_off_deleted": "تم حذف فترة الإغلاق بنجاح",
+      "login_required": "تحتاج إلى تسجيل الدخول للوصول إلى ساعات العمل"
+    },
+    "to": "إلى",
+    "delete": "حذف",
+    "validation": {
+      "enter_title": "الرجاء إدخال عنوان",
+      "select_day": "الرجاء اختيار يوم من أيام الأسبوع",
+      "select_date": "الرجاء اختيار تاريخ"
+    },
+    "manage_hint": "استخدم خيار ساعات العمل في شاشة الملف الشخصي لإدارة الساعات"
+  },
+  "errors": {
+    "theme_change": "فشل في تغيير المظهر: {error}",
+    "logout": "فشل في تسجيل الخروج: {error}"
+  },
+  "terms": {
+    "title": "شروط الخدمة",
+    "last_updated": "آخر تحديث: 1 يونيو 2023",
+    "sections": {
+      "acceptance": {
+        "title": "قبول الشروط",
+        "content": "باستخدامك لتطبيق ملاعبنا، فإنك توافق على الالتزام بشروط الخدمة هذه وجميع القوانين واللوائح المعمول بها."
+      },
+      "description": {
+        "title": "وصف الخدمة",
+        "content": "يوفر ملاعبنا منصة لأصحاب الملاعب لإدارة مرافقهم وللمستخدمين لحجز الملاعب الرياضية."
+      },
+      "accounts": {
+        "title": "حسابات المستخدمين",
+        "content": "أنت مسؤول عن الحفاظ على سرية معلومات حسابك وعن جميع الأنشطة التي تتم باستخدام حسابك."
+      },
+      "booking": {
+        "title": "الحجز والإلغاء",
+        "content": "تخضع جميع الحجوزات للتوفر. قد تختلف سياسات الإلغاء حسب الملعب وسيتم توضيحها بشكل واضح."
+      },
+      "conduct": {
+        "title": "سلوك المستخدم",
+        "content": "يجب على المستخدمين الامتثال لجميع القوانين واللوائح المعمول بها. يشمل السلوك المحظور المضايقة والإساءة والأنشطة غير القانونية."
+      },
+      "liability": {
+        "title": "حدود المسؤولية",
+        "content": "ملاعبنا غير مسؤولة عن أي أضرار ناتجة عن استخدام خدماتنا أو أي محتوى يتم تقديمه من خلال منصتنا."
+      },
+      "modifications": {
+        "title": "تعديلات الخدمة",
+        "content": "نحتفظ بالحق في تعديل أو إيقاف أي جانب من جوانب خدمتنا في أي وقت دون إشعار مسبق."
+      },
+      "contact": {
+        "title": "اتصل بنا",
+        "content": "إذا كان لديك أي أسئلة حول هذه الشروط، يرجى الاتصال بنا على support@malaebna.com."
+      }
+    }
+  },
+  "privacy": {
+    "title": "سياسة الخصوصية",
+    "last_updated": "آخر تحديث: 1 يونيو 2023",
+    "sections": {
+      "collection": {
+        "title": "جمع المعلومات",
+        "content": "نجمع معلومات شخصية مثل الاسم وتفاصيل الاتصال ومعلومات الدفع لتقديم خدماتنا."
+      },
+      "usage": {
+        "title": "استخدام المعلومات",
+        "content": "نستخدم معلوماتك لتقديم خدماتنا وتحسين تجربة المستخدم والتواصل معك بشأن حسابك."
+      },
+      "sharing": {
+        "title": "مشاركة المعلومات",
+        "content": "قد نشارك معلوماتك مع أصحاب الملاعب ومعالجي الدفع ومقدمي الخدمات الآخرين حسب الضرورة."
+      },
+      "security": {
+        "title": "أمن البيانات",
+        "content": "نقوم بتنفيذ تدابير أمنية مناسبة لحماية معلوماتك الشخصية من الوصول أو الكشف غير المصرح به."
+      },
+      "rights": {
+        "title": "حقوقك",
+        "content": "لديك الحق في الوصول إلى معلوماتك الشخصية أو تصحيحها أو حذفها. اتصل بنا لممارسة هذه الحقوق."
+      },
+      "children": {
+        "title": "خصوصية الأطفال",
+        "content": "خدماتنا غير مخصصة للأطفال دون سن 13 عامًا. نحن لا نجمع عن علم معلومات من الأطفال دون سن 13 عامًا."
+      },
+      "changes": {
+        "title": "تغييرات في سياسة الخصوصية",
+        "content": "قد نقوم بتحديث هذه السياسة من وقت لآخر. سيتم إخطارك بالتغييرات الهامة من خلال التطبيق."
+      },
+      "contact": {
+        "title": "اتصل بنا",
+        "content": "إذا كان لديك أي أسئلة حول سياسة الخصوصية هذه، يرجى الاتصال بنا على privacy@malaebna.com."
+      }
+    }
+  },
+  "payment": {
+    "title": "الدفع",
+    "summary": "ملخص الدفع",
+    "total_amount": "المبلغ الإجمالي",
+    "payment_method": "طريقة الدفع",
+    "card_payment": "الدفع بالبطاقة",
+    "cash_payment": "نقداً",
+    "wallet_payment": "المحفظة",
+    "saved_cards": "البطاقات المحفوظة",
+    "add_new_card": "إضافة بطاقة جديدة",
+    "card_number": "رقم البطاقة",
+    "card_holder": "اسم حامل البطاقة",
+    "expiry_date": "تاريخ الانتهاء",
+    "cvv": "رمز التحقق",
+    "save_card": "حفظ هذه البطاقة للمدفوعات المستقبلية",
+    "pay_now": "ادفع الآن",
+    "cancel": "إلغاء الدفع",
+    "processing": "جاري معالجة الدفع...",
+    "success_title": "تم الدفع بنجاح!",
+    "success_message": "تمت معالجة الدفع الخاص بك بنجاح.",
+    "failure_title": "فشل الدفع",
+    "transaction_id": "رقم العملية",
+    "payment_date": "تاريخ الدفع",
+    "amount_paid": "المبلغ المدفوع",
+    "continue_shopping": "متابعة",
+    "try_again": "حاول مرة أخرى",
+    "validation": {
+      "invalid_card": "رقم البطاقة غير صالح",
+      "expired_card": "البطاقة منتهية الصلاحية",
+      "invalid_cvv": "رمز CVV غير صالح"
+    },
+    "or": "أو",
+    "cancel_confirm": "إلغاء الدفع؟",
+    "cancel_payment_message": "يتم معالجة الدفع الخاص بك. هل أنت متأكد أنك تريد الإلغاء؟",
+
+    "history": {
+      "title": "سجل المدفوعات",
+      "empty_state": "لا يوجد سجل مدفوعات",
+      "empty_state_message": "جرب نطاق تاريخ مختلف أو امسح البحث",
+      "total_revenue": "إجمالي الإيرادات",
+      "transactions": "المعاملات",
+      "search_placeholder": "البحث حسب اللاعب أو الملعب أو المبلغ...",
+      "export": "تصدير",
+      "refresh": "تحديث",
+      "time_periods": {
+        "day": "اليوم",
+        "week": "هذا الأسبوع",
+        "month": "هذا الشهر",
+        "year": "هذه السنة",
+        "all_time": "كل الأوقات",
+        "custom_range": "نطاق مخصص"
+      },
+      "transaction_details": {
+        "title": "تفاصيل المعاملة",
+        "id": "رقم المعاملة",
+        "date_time": "التاريخ والوقت",
+        "player_name": "اسم اللاعب",
+        "player_id": "رقم اللاعب",
+        "field": "الملعب",
+        "payment_method": "طريقة الدفع",
+        "status": "الحالة",
+        "download_receipt": "تنزيل الإيصال",
+        "email_receipt": "إرسال الإيصال بالبريد الإلكتروني",
+        "receipt_download_started": "بدأ تنزيل الإيصال",
+        "receipt_email_sent": "تم إرسال الإيصال إلى البريد الإلكتروني"
+      },
+      "export_options": {
+        "pdf": "تصدير كـ PDF",
+        "csv": "تصدير كـ CSV",
+        "excel": "تصدير كـ Excel",
+        "export_started": "بدأ التصدير"
+      }
+    }
+  },
+  "or": "أو",
+  "cancel_confirm": "إلغاء الدفع؟",
+  "cancel_payment_message": "تتم معالجة عملية الدفع الخاصة بك. هل أنت متأكد أنك تريد الإلغاء؟",
+  "validation": {
+    "field_required": "هذا الحقل مطلوب",
+    "name_required": "الاسم مطلوب",
+    "name_short": "الاسم قصير جداً",
+    "phone_required": "رقم الهاتف مطلوب",
+    "valid_phone_required": "الرجاء إدخال رقم هاتف صحيح",
+    "invalid_saudi_number": "الرجاء إدخال رقم هاتف سعودي صحيح",
+    "invalid_yemen_number": "الرجاء إدخال رقم هاتف يمني صحيح (يبدأ بـ 70 أو 71 أو 73 أو 77 أو 78)",
+    "location_required": "الموقع مطلوب",
+    "address_required": "العنوان مطلوب",
+    "email_required": "البريد الإلكتروني مطلوب",
+    "email_invalid": "أدخل بريد إلكتروني صحيح"
+  },
+  "sport_types": {
+    "football": "كرة القدم",
+    "basketball": "كرة السلة",
+    "tennis": "التنس",
+    "volleyball": "الكرة الطائرة",
+    "multiple": "متعدد الرياضات"
+  },
+  "services": {
+    "parking": "موقف سيارات",
+    "cafeteria": "كافتيريا",
+    "locker_rooms": "غرف تبديل الملابس",
+    "showers": "دورات مياه",
+    "wifi": "واي فاي",
+    "lighting": "إضاءة",
+    "training_equipment": "معدات تدريب",
+    "first_aid": "إسعافات أولية"
+  },
+  "prices_coupons": {
+    "title": "الأسعار والكوبونات",
+    "subtitle": "إدارة أسعار الملعب وكوبونات العروض الترويجية",
+    "prices": {
+      "tab_title": "الأسعار",
+      "add_price": "إضافة سعر",
+      "edit_price": "تعديل السعر",
+      "price_per_hour": "السعر في الساعة",
+      "price_required": "السعر مطلوب",
+      "price_must_be_positive": "يجب أن يكون السعر رقمًا موجبًا",
+      "time_range": "النطاق الزمني",
+      "select_days": "اختر أيام الأسبوع",
+      "please_select_at_least_one_day": "الرجاء اختيار يوم واحد على الأقل من أيام الأسبوع",
+      "invalid_price": "قيمة السعر غير صالحة",
+      "price_created_successfully": "تم إنشاء السعر بنجاح",
+      "price_updated_successfully": "تم تحديث السعر بنجاح",
+      "price_deleted_successfully": "تم حذف السعر بنجاح",
+      "confirm_delete": "تأكيد الحذف",
+      "confirm_delete_price_message": "هل أنت متأكد أنك تريد حذف هذا السعر؟",
+      "no_prices_found": "لم يتم العثور على أسعار لهذا الملعب",
+      "loading_prices": "جارٍ تحميل الأسعار...",
+      "select_field": "اختر الملعب"
+    },
+    "coupons": {
+      "tab_title": "الكوبونات",
+      "add_coupon": "إضافة كوبون",
+      "edit_coupon": "تعديل الكوبون",
+      "coupon_name": "اسم الكوبون",
+      "coupon_code": "رمز الكوبون",
+      "discount_percentage": "نسبة الخصم",
+      "expiration_date": "تاريخ انتهاء الصلاحية",
+      "status": "الحالة",
+      "active": "نشط",
+      "inactive": "غير نشط",
+      "expired": "منتهي الصلاحية",
+      "active_coupon": "نشط",
+      "inactive_coupon": "غير نشط",
+      "expired_coupon": "منتهي الصلاحية",
+      "time_range": "النطاق الزمني الصالح",
+      "select_days": "أيام الأسبوع الصالحة",
+      "please_select_at_least_one_day": "الرجاء اختيار يوم واحد على الأقل من أيام الأسبوع",
+      "invalid_discount_percentage": "يجب أن يكون الخصم بين 1 و 100",
+      "coupon_created_successfully": "تم إنشاء الكوبون بنجاح",
+      "coupon_updated_successfully": "تم تحديث الكوبون بنجاح",
+      "coupon_deleted_successfully": "تم حذف الكوبون بنجاح",
+      "confirm_delete": "تأكيد الحذف",
+      "confirm_delete_coupon_message": "هل أنت متأكد أنك تريد حذف هذا الكوبون؟",
+      "no_coupons_found": "لم يتم العثور على كوبونات لهذا الملعب",
+      "loading_coupons": "جارٍ تحميل الكوبونات...",
+      "name_required": "اسم الكوبون مطلوب",
+      "code_required": "رمز الكوبون مطلوب",
+      "code_length_error": "يجب أن يكون طول رمز الكوبون بين 3 و 20 حرفًا",
+      "discount_required": "نسبة الخصم مطلوبة",
+      "discount_range_error": "يجب أن يكون الخصم بين 1 و 100%",
+      "weekend_special": "عرض نهاية الأسبوع",
+      "code": "الرمز",
+      "off": "خصم",
+      "expires": "ينتهي"
+    },
+    "common": {
+      "save": "حفظ",
+      "to": "إلى",
+      "monday": "الإثنين",
+      "tuesday": "الثلاثاء",
+      "wednesday": "الأربعاء",
+      "thursday": "الخميس",
+      "friday": "الجمعة",
+      "saturday": "السبت",
+      "sunday": "الأحد",
+      "sar": "ريال"
+    }
+  },
+  "snackbar": {
+    "error": {
+      "general": "حدث خطأ",
+      "loading_stadium": "خطأ في تحميل بيانات الملعب",
+      "no_stadium_id": "لم يتم العثور على معرف الملعب. استخدام النسخة الاحتياطية للتطوير.",
+      "image_processing_failed": "فشل في معالجة الصورة",
+      "image_upload_failed": "فشل في إضافة الصورة: {error}",
+      "image_delete_failed": "خطأ في حذف الصورة: {error}",
+      "error_picking_image": "خطأ في اختيار الصورة: {error}",
+      "name_required": "الاسم مطلوب",
+      "validation_error": "يرجى تصحيح أخطاء التحقق"
+    },
+    "success": {
+      "general": "تمت العملية بنجاح",
+      "image_added": "تمت إضافة الصورة بنجاح",
+      "image_removed": "تمت إزالة الصورة بنجاح",
+      "profile_updated": "تم تحديث الملف الشخصي بنجاح",
+      "location_updated": "تم تحديث الموقع بنجاح",
+      "working_hours_saved": "تم حفظ ساعات العمل بنجاح",
+      "settings_saved": "تم حفظ الإعدادات بنجاح",
+      "payment_processed": "تمت معالجة الدفع بنجاح"
+    },
+    "info": {
+      "processing_image": "جاري معالجة الصورة...",
+      "saving": "جاري الحفظ...",
+      "loading": "جاري التحميل...",
+      "deleting_image": "جاري حذف الصورة..."
+    },
+    "warning": {
+      "function_not_available": "هذه الوظيفة غير متاحة في وضع العرض التوضيحي",
+      "discard_changes": "سيتم تجاهل التغييرات"
+    }
+  },
+  "home": {
+    "error_occurred": "حدث خطأ",
+    "field_names": {
+      "field_a": "الملعب أ",
+      "field_b": "الملعب ب",
+      "field_c": "الملعب ج"
+    },
+    "times": {
+      "time_1": "14:00 - 16:00",
+      "time_2": "18:30 - 20:30",
+      "time_3": "21:00 - 23:00"
+    },
+    "clients": {
+      "client_1": "أحمد علي",
+      "client_2": "محمد صالح",
+      "client_3": "عمر حسن"
+    },
+    "status": {
+      "confirmed": "مؤكد"
+    },
+    "chart": {
+      "weekly": "أسبوعي",
+      "monthly": "شهري",
+      "revenue": "الإيرادات",
+      "mon": "إثنين",
+      "tue": "ثلاثاء",
+      "wed": "أربعاء",
+      "thu": "خميس",
+      "fri": "جمعة",
+      "sat": "سبت",
+      "sun": "أحد"
+    }
+  },
+  "map": {
+    "select_location": "اختر الموقع",
+    "tap_to_select": "اضغط على الخريطة لتحديد موقعك",
+    "confirm_location": "تأكيد موقعك",
+    "unknown": "غير معروف",
+    "country": "الدولة",
+    "city": "المدينة",
+    "district": "الحي",
+    "coordinates": "الإحداثيات",
+    "confirm": "تأكيد",
+    "selected_location": "الموقع المحدد",
+    "help_title": "كيفية استخدام الخريطة",
+    "help_tap": "اضغط في أي مكان على الخريطة لوضع علامة",
+    "help_gps": "استخدم زر GPS للعثور على موقعك الحالي",
+    "help_zoom": "استخدم أزرار + و - للتكبير والتصغير",
+    "help_confirm": "تأكيد موقعك المحدد عندما تكون جاهزًا",
+    "permission_title": "إذن الموقع",
+    "permission_denied": "إذن الموقع مطلوب لاستخدام ميزات الخريطة. يرجى منح الإذن في إعدادات جهازك.",
+    "service_disabled_title": "خدمات الموقع معطلة",
+    "service_disabled_message": "خدمات الموقع معطلة. يرجى تمكين خدمات الموقع في إعدادات جهازك لاستخدام ميزات الخريطة.",
+    "try_again": "حاول مرة أخرى"
+  }
+}

@@ -1,0 +1,40 @@
+flutter_native_splash:
+  # Background color
+  color: "#FFFFFF"
+  color_dark: "#1A3C2E"
+
+  # Image
+  image: assets/images/logo/malaebna_logo_dark.png
+  image_dark: assets/images/logo/malaebna_logo_dark.png
+
+  # Branding text below the image - commented out since files might not exist
+  # branding: assets/images/logo/malaebna_text.png
+  # branding_dark: assets/images/logo/malaebna_text_dark.png
+
+  # Position the logo a bit higher than center
+  android_gravity: center
+  ios_content_mode: center
+  web_image_mode: center
+
+  # Image configuration
+  android_12:
+    # The image parameter sets the splash screen icon image
+    image: assets/images/logo/malaebna_logo_dark.png
+    icon_background_color: "#FFFFFF"
+    image_dark: assets/images/logo/malaebna_logo_dark.png
+    icon_background_color_dark: "#1A3C2E"
+
+    # Splash screen background
+    color: "#FFFFFF"
+    color_dark: "#1A3C2E"
+
+  # Android, iOS and web specific settings
+  android: true
+  ios: true
+  web: false
+
+  # Disable fullscreen mode to show status bar
+  fullscreen: false
+
+  # Screen orientation
+  android_screen_orientation: portrait

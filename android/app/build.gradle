@@ -1,0 +1,239 @@
+plugins {
+    id "com.android.application"
+    // START: FlutterFire Configuration
+    // id 'com.google.gms.google-services' // Commented out until properly configured
+    // END: FlutterFire Configuration
+    id "kotlin-android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+def keystoreProperties = new Properties()
+def keystorePropertiesFile = rootProject.file("key.properties")
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
+
+// Fix for AAPT2 errors in projects with spaces in path
+project.ext.set("android.injected.build.model.only.versioned", 4)
+project.ext.set("android.enableR8.fullMode", false) 
+project.ext.set("android.enableResourceOptimizations", false)
+
+// Remove deprecated options
+// project.ext.set("android.enableDexingArtifactTransform.desugaring", true)
+
+// Special handling for paths with spaces
+project.buildDir = file("${rootProject.projectDir}/../build/app".toString())
+def safeDir = project.buildDir.absolutePath.replace(" ", "\\ ")
+project.ext.set("android.buildDir", safeDir)
+
+android {
+    namespace = "com.mohammad_alameri_soft.manage_malaebna"
+    compileSdk = 35
+    ndkVersion = "25.1.8937393"
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+    
+    // AAPT2 options compatible with Android Gradle Plugin 8.0+
+    aaptOptions {
+        cruncherEnabled = false
+        noCompress "tflite", "jpg", "png", "webp"
+        ignoreAssetsPattern = "!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~"
+    }
+
+    defaultConfig {
+        applicationId = "com.mohammad_alameri_soft.manage_malaebna"
+        minSdk = 23
+        targetSdk = 35
+        versionCode = 1
+        versionName = "1.0"
+        
+        // Add this to avoid resource conflicts
+        resourceConfigurations += ["en", "ar"]
+        
+        // Enable MultiDex
+        multiDexEnabled true
+        
+        // Explicitly specify supported ABIs for native libraries
+        ndk {
+            abiFilters "arm64-v8a", "armeabi-v7a", "x86_64"
+        }
+    }
+    
+    signingConfigs {
+        if (keystorePropertiesFile.exists()) {
+            release {
+                storeFile file(rootProject.file(keystoreProperties['storeFile']))
+                storePassword keystoreProperties['storePassword']
+                keyAlias keystoreProperties['keyAlias']
+                keyPassword keystoreProperties['keyPassword']
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            if (keystorePropertiesFile.exists()) {
+                signingConfig signingConfigs.release
+            }
+            // Disable R8/proguard for this build
+            minifyEnabled false
+            shrinkResources false
+            // proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            // Standard debug configuration
+            jniDebuggable true
+        }
+    }
+    
+    // Properly configure split APKs for better distribution
+    splits {
+        abi {
+            enable true
+            reset()
+            include 'armeabi-v7a', 'arm64-v8a', 'x86_64'
+            universalApk true  // Set to true to generate a universal APK with all ABIs
+        }
+    }
+    
+    lintOptions {
+        disable 'InvalidPackage'
+        abortOnError false
+    }
+    
+    packagingOptions {
+        resources {
+            excludes += [
+                'META-INF/DEPENDENCIES',
+                'META-INF/LICENSE',
+                'META-INF/LICENSE.txt',
+                'META-INF/NOTICE'
+            ]
+        }
+    }
+    
+    bundle {
+        language {
+            enableSplit = true
+        }
+        density {
+            enableSplit = true
+        }
+        abi {
+            enableSplit = true
+        }
+    }
+}
+
+// Add Multidex dependency
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.multidex:multidex:2.0.1'
+}
+
+// This task ensures the APK is copied to where Flutter expects it
+tasks.whenTaskAdded { task ->
+    if (task.name == 'assembleDebug') {
+        task.doLast {
+            // Source APK files
+            def debugDir = file("${buildDir}/outputs/apk/debug")
+            if (debugDir.exists()) {
+                println "APK directory found at: ${debugDir.absolutePath}"
+                
+                // Create the needed directories
+                def flutterApkDir = file("${rootProject.projectDir}/../build/app/outputs/flutter-apk")
+                flutterApkDir.mkdirs()
+                
+                // Find and copy the universal APK if it exists
+                def universalApk = new File(debugDir, "app-universal-debug.apk")
+                if (universalApk.exists()) {
+                    println "Found universal APK: ${universalApk.name}"
+                    def targetApk = new File(flutterApkDir, "app-debug.apk")
+                    ant.copy(file: universalApk, tofile: targetApk, overwrite: true)
+                    println "Universal APK copied to: ${targetApk.absolutePath}"
+                } else {
+                    // If universal APK not found, try to copy any available APK
+                    debugDir.listFiles().each { file ->
+                        if (file.name.endsWith('.apk')) {
+                            println "Found APK: ${file.name}"
+                            
+                            // Copy as the app-debug.apk which is what Flutter expects
+                            def targetApk = new File(flutterApkDir, "app-debug.apk")
+                            ant.copy(file: file, tofile: targetApk, overwrite: true)
+                            println "APK copied to: ${targetApk.absolutePath}"
+                            
+                            // Only need to copy one APK, so break after first one
+                            return true
+                        }
+                    }
+                }
+            } else {
+                println "Warning: Debug APK directory does not exist: ${debugDir.absolutePath}"
+            }
+        }
+    }
+    
+    // Fix for AAPT2 daemon issues
+    if (task.name.contains('processDebugResources') || task.name.contains('processReleaseResources')) {
+        task.doFirst {
+            println "Starting resource processing with enhanced AAPT2 settings..."
+            // Set system properties for this task
+            System.setProperty("android.enableAapt2", "true") 
+            System.setProperty("android.enableAapt2Daemon", "false")
+        }
+    }
+}
+
+// Handle AAPT2 errors when they occur
+gradle.taskGraph.afterTask { task ->
+    if ((task.name.contains('processDebugResources') || task.name.contains('processReleaseResources')) && task.state.failure) {
+        println "===== AAPT2 ERROR DETECTED ====="
+        println "Attempting to recover from AAPT2 error..."
+        println "To resolve this error, try building again with:"
+        println "./gradlew clean assembleDebug -Pandroid.enableAapt2Daemon=false"
+        println "============================================"
+    }
+}
+
+// Add a task to copy split APKs to the flutter-apk directory
+tasks.register('copySplitApks') {
+    doLast {
+        def releaseDir = file("${buildDir}/outputs/apk/release")
+        if (releaseDir.exists()) {
+            println "Release APK directory found at: ${releaseDir.absolutePath}"
+            
+            // Create the needed directories
+            def flutterApkDir = file("${rootProject.projectDir}/../build/app/outputs/flutter-apk")
+            flutterApkDir.mkdirs()
+            
+            // Copy the APK files
+            releaseDir.listFiles().each { file ->
+                if (file.name.endsWith('.apk')) {
+                    println "Found Release APK: ${file.name}"
+                    
+                    // Copy the split APK with its original name
+                    def targetApk = new File(flutterApkDir, file.name)
+                    ant.copy(file: file, tofile: targetApk, overwrite: true)
+                    println "APK copied to: ${targetApk.absolutePath}"
+                }
+            }
+        } else {
+            println "Warning: Release APK directory does not exist: ${releaseDir.absolutePath}"
+        }
+    }
+}
+
+// Add dependency to run copySplitApks after assembleRelease
+tasks.whenTaskAdded { task ->
+    if (task.name == 'assembleRelease') {
+        task.finalizedBy 'copySplitApks'
+    }
+}

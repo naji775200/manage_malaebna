@@ -1,0 +1,68 @@
+com.mohammad_alameri_soft.manage_malaebna.app-jetified-activity-1.9.3-0 C:\Users\alameri\.gradle\caches\transforms-4\00db42e32147b18efa23efc1e3e7d3f8\transformed\jetified-activity-1.9.3\res
+com.mohammad_alameri_soft.manage_malaebna.app-jetified-window-1.2.0-1 C:\Users\alameri\.gradle\caches\transforms-4\02890b52696eefc1e8581adbc367a48e\transformed\jetified-window-1.2.0\res
+com.mohammad_alameri_soft.manage_malaebna.app-jetified-sentry-android-7.22.4-2 C:\Users\alameri\.gradle\caches\transforms-4\03426fef60aaada0cc0cc505252075c2\transformed\jetified-sentry-android-7.22.4\res
+com.mohammad_alameri_soft.manage_malaebna.app-jetified-datastore-release-3 C:\Users\alameri\.gradle\caches\transforms-4\048f1c4ccca0575105357a0125629874\transformed\jetified-datastore-release\res
+com.mohammad_alameri_soft.manage_malaebna.app-jetified-savedstate-ktx-1.2.1-4 C:\Users\alameri\.gradle\caches\transforms-4\0ffeece28b5403f43f8b25582c99ca3d\transformed\jetified-savedstate-ktx-1.2.1\res
+com.mohammad_alameri_soft.manage_malaebna.app-jetified-tracing-1.2.0-5 C:\Users\alameri\.gradle\caches\transforms-4\181c65f310b55b0863613c4d7b574f9e\transformed\jetified-tracing-1.2.0\res
+com.mohammad_alameri_soft.manage_malaebna.app-jetified-emoji2-views-helper-1.2.0-6 C:\Users\alameri\.gradle\caches\transforms-4\1cd39f460586b84ee3e625a9fa16b290\transformed\jetified-emoji2-views-helper-1.2.0\res
+com.mohammad_alameri_soft.manage_malaebna.app-appcompat-1.6.1-7 C:\Users\alameri\.gradle\caches\transforms-4\23ffe3b62e69b0c2bf914529314435b3\transformed\appcompat-1.6.1\res
+com.mohammad_alameri_soft.manage_malaebna.app-jetified-datastore-core-release-8 C:\Users\alameri\.gradle\caches\transforms-4\24c4ab8ffaabc0dc1b0560ea8c367140\transformed\jetified-datastore-core-release\res
+com.mohammad_alameri_soft.manage_malaebna.app-jetified-sentry-android-ndk-7.22.4-9 C:\Users\alameri\.gradle\caches\transforms-4\292f40395f469c46112f005dca3561b4\transformed\jetified-sentry-android-ndk-7.22.4\res
+com.mohammad_alameri_soft.manage_malaebna.app-jetified-datastore-preferences-release-10 C:\Users\alameri\.gradle\caches\transforms-4\2f569349e4a95fb266b1d8ae740866d9\transformed\jetified-datastore-preferences-release\res
+com.mohammad_alameri_soft.manage_malaebna.app-jetified-annotation-experimental-1.4.0-11 C:\Users\alameri\.gradle\caches\transforms-4\36faeaad5266fb44ff1b74f052ba60ab\transformed\jetified-annotation-experimental-1.4.0\res
+com.mohammad_alameri_soft.manage_malaebna.app-lifecycle-livedata-2.7.0-12 C:\Users\alameri\.gradle\caches\transforms-4\424f2c06fc3d2d183e1100247e2ac0a4\transformed\lifecycle-livedata-2.7.0\res
+com.mohammad_alameri_soft.manage_malaebna.app-jetified-appcompat-resources-1.6.1-13 C:\Users\alameri\.gradle\caches\transforms-4\4265743a30245ee97f91653978df0d04\transformed\jetified-appcompat-resources-1.6.1\res
+com.mohammad_alameri_soft.manage_malaebna.app-jetified-fragment-ktx-1.7.1-14 C:\Users\alameri\.gradle\caches\transforms-4\46e7779c2415cac4ee5e00774401758d\transformed\jetified-fragment-ktx-1.7.1\res
+com.mohammad_alameri_soft.manage_malaebna.app-preference-1.2.1-15 C:\Users\alameri\.gradle\caches\transforms-4\4747d5e7ec16f1fcf66290e1fa19fb72\transformed\preference-1.2.1\res
+com.mohammad_alameri_soft.manage_malaebna.app-jetified-play-services-maps-18.2.0-16 C:\Users\alameri\.gradle\caches\transforms-4\47745e09b3e7be4b8d746bfc51fd61ea\transformed\jetified-play-services-maps-18.2.0\res
+com.mohammad_alameri_soft.manage_malaebna.app-jetified-sentry-android-replay-7.22.4-17 C:\Users\alameri\.gradle\caches\transforms-4\49d74764c01c0cd97dea387f397bb028\transformed\jetified-sentry-android-replay-7.22.4\res
+com.mohammad_alameri_soft.manage_malaebna.app-slidingpanelayout-1.2.0-18 C:\Users\alameri\.gradle\caches\transforms-4\5991ec3b8f62af195c473495a05a381f\transformed\slidingpanelayout-1.2.0\res
+com.mohammad_alameri_soft.manage_malaebna.app-jetified-lifecycle-viewmodel-ktx-2.7.0-19 C:\Users\alameri\.gradle\caches\transforms-4\59e609a0888bbe3d7dcfcace88b80c6d\transformed\jetified-lifecycle-viewmodel-ktx-2.7.0\res
+com.mohammad_alameri_soft.manage_malaebna.app-jetified-startup-runtime-1.1.1-20 C:\Users\alameri\.gradle\caches\transforms-4\5ba927caf1ec0a88cf8955af36178462\transformed\jetified-startup-runtime-1.1.1\res
+com.mohammad_alameri_soft.manage_malaebna.app-transition-1.4.1-21 C:\Users\alameri\.gradle\caches\transforms-4\5c6bf6f708ce1fb727295e1ec2a47a21\transformed\transition-1.4.1\res
+com.mohammad_alameri_soft.manage_malaebna.app-jetified-lifecycle-livedata-core-ktx-2.7.0-22 C:\Users\alameri\.gradle\caches\transforms-4\65d13dc4dfd65d98b4a01048668f42b9\transformed\jetified-lifecycle-livedata-core-ktx-2.7.0\res
+com.mohammad_alameri_soft.manage_malaebna.app-coordinatorlayout-1.0.0-23 C:\Users\alameri\.gradle\caches\transforms-4\6c119767db881114136481a005dd1b1c\transformed\coordinatorlayout-1.0.0\res
+com.mohammad_alameri_soft.manage_malaebna.app-jetified-play-services-base-18.3.0-24 C:\Users\alameri\.gradle\caches\transforms-4\71508ea50cf99aa59a28827a3b0debf8\transformed\jetified-play-services-base-18.3.0\res
+com.mohammad_alameri_soft.manage_malaebna.app-jetified-activity-ktx-1.9.3-25 C:\Users\alameri\.gradle\caches\transforms-4\79f2c784c9395b51cff188066531db3c\transformed\jetified-activity-ktx-1.9.3\res
+com.mohammad_alameri_soft.manage_malaebna.app-jetified-play-services-basement-18.3.0-26 C:\Users\alameri\.gradle\caches\transforms-4\7d5e3dfad3f9482ec283a5086ff95510\transformed\jetified-play-services-basement-18.3.0\res
+com.mohammad_alameri_soft.manage_malaebna.app-jetified-savedstate-1.2.1-27 C:\Users\alameri\.gradle\caches\transforms-4\873cd7a4bc8eaf063c4a3a403328dd45\transformed\jetified-savedstate-1.2.1\res
+com.mohammad_alameri_soft.manage_malaebna.app-jetified-core-1.0.0-28 C:\Users\alameri\.gradle\caches\transforms-4\91d7b628d73c60d71d4794c8afbf1c65\transformed\jetified-core-1.0.0\res
+com.mohammad_alameri_soft.manage_malaebna.app-lifecycle-runtime-2.7.0-29 C:\Users\alameri\.gradle\caches\transforms-4\97182f68fe8baca50fc8a2c7a9e75ef3\transformed\lifecycle-runtime-2.7.0\res
+com.mohammad_alameri_soft.manage_malaebna.app-browser-1.8.0-30 C:\Users\alameri\.gradle\caches\transforms-4\996af18d8d16166d40427384b1ffabcf\transformed\browser-1.8.0\res
+com.mohammad_alameri_soft.manage_malaebna.app-lifecycle-livedata-core-2.7.0-31 C:\Users\alameri\.gradle\caches\transforms-4\9d7d3722cba5b9aca168cbc2a1ba4fe5\transformed\lifecycle-livedata-core-2.7.0\res
+com.mohammad_alameri_soft.manage_malaebna.app-lifecycle-viewmodel-2.7.0-32 C:\Users\alameri\.gradle\caches\transforms-4\9e05499104b216ad3e4b57f67791a9fd\transformed\lifecycle-viewmodel-2.7.0\res
+com.mohammad_alameri_soft.manage_malaebna.app-core-1.13.1-33 C:\Users\alameri\.gradle\caches\transforms-4\9f07689c2ed0e9450d09f69cd946d222\transformed\core-1.13.1\res
+com.mohammad_alameri_soft.manage_malaebna.app-jetified-lifecycle-process-2.7.0-34 C:\Users\alameri\.gradle\caches\transforms-4\a0288e251ac7d82db2979d6f85706d3c\transformed\jetified-lifecycle-process-2.7.0\res
+com.mohammad_alameri_soft.manage_malaebna.app-core-runtime-2.2.0-35 C:\Users\alameri\.gradle\caches\transforms-4\a2a0d09e244d2bf46a76efb82f959cd1\transformed\core-runtime-2.2.0\res
+com.mohammad_alameri_soft.manage_malaebna.app-jetified-profileinstaller-1.3.1-36 C:\Users\alameri\.gradle\caches\transforms-4\a31a93fae27d2d9ec935fba5d88cf49f\transformed\jetified-profileinstaller-1.3.1\res
+com.mohammad_alameri_soft.manage_malaebna.app-jetified-emoji2-1.2.0-37 C:\Users\alameri\.gradle\caches\transforms-4\a59e514a74461d9b08fd4f178cacd01b\transformed\jetified-emoji2-1.2.0\res
+com.mohammad_alameri_soft.manage_malaebna.app-jetified-android-maps-utils-3.6.0-38 C:\Users\alameri\.gradle\caches\transforms-4\b36885a6cd3d5fecfad36397783bfbbd\transformed\jetified-android-maps-utils-3.6.0\res
+com.mohammad_alameri_soft.manage_malaebna.app-recyclerview-1.0.0-39 C:\Users\alameri\.gradle\caches\transforms-4\b6606c1497eb02585c5dd40722cc1541\transformed\recyclerview-1.0.0\res
+com.mohammad_alameri_soft.manage_malaebna.app-jetified-sentry-android-core-7.22.4-40 C:\Users\alameri\.gradle\caches\transforms-4\b7092fe54441bb4e17a23299e2be9e2a\transformed\jetified-sentry-android-core-7.22.4\res
+com.mohammad_alameri_soft.manage_malaebna.app-jetified-lifecycle-runtime-ktx-2.7.0-41 C:\Users\alameri\.gradle\caches\transforms-4\c9dc7d6dc37b7653e2816c6955acf618\transformed\jetified-lifecycle-runtime-ktx-2.7.0\res
+com.mohammad_alameri_soft.manage_malaebna.app-jetified-lifecycle-viewmodel-savedstate-2.7.0-42 C:\Users\alameri\.gradle\caches\transforms-4\cdd8c134443508018ff359dbb141b21f\transformed\jetified-lifecycle-viewmodel-savedstate-2.7.0\res
+com.mohammad_alameri_soft.manage_malaebna.app-jetified-core-ktx-1.13.1-43 C:\Users\alameri\.gradle\caches\transforms-4\dc58f0a92366fc6e9f0cdb205c0c58dd\transformed\jetified-core-ktx-1.13.1\res
+com.mohammad_alameri_soft.manage_malaebna.app-fragment-1.7.1-44 C:\Users\alameri\.gradle\caches\transforms-4\f8728715d60a6f3fefcd91b5d40d1e19\transformed\fragment-1.7.1\res
+com.mohammad_alameri_soft.manage_malaebna.app-jetified-window-java-1.2.0-45 C:\Users\alameri\.gradle\caches\transforms-4\fa0e3291c0fb542ba9a831c04620b288\transformed\jetified-window-java-1.2.0\res
+com.mohammad_alameri_soft.manage_malaebna.app-debug-46 E:\My Project\manage_malaebna\android\app\src\debug\res
+com.mohammad_alameri_soft.manage_malaebna.app-main-47 E:\My Project\manage_malaebna\android\app\src\main\res
+com.mohammad_alameri_soft.manage_malaebna.app-pngs-48 E:\My Project\manage_malaebna\build\app\generated\res\pngs\debug
+com.mohammad_alameri_soft.manage_malaebna.app-resValues-49 E:\My Project\manage_malaebna\build\app\generated\res\resValues\debug
+com.mohammad_alameri_soft.manage_malaebna.app-mergeDebugResources-50 E:\My Project\manage_malaebna\build\app\intermediates\incremental\debug\mergeDebugResources\merged.dir
+com.mohammad_alameri_soft.manage_malaebna.app-mergeDebugResources-51 E:\My Project\manage_malaebna\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+com.mohammad_alameri_soft.manage_malaebna.app-merged_res-52 E:\My Project\manage_malaebna\build\app\intermediates\merged_res\debug
+com.mohammad_alameri_soft.manage_malaebna.app-packaged_res-53 E:\My Project\manage_malaebna\build\app_links\intermediates\packaged_res\debug
+com.mohammad_alameri_soft.manage_malaebna.app-packaged_res-54 E:\My Project\manage_malaebna\build\connectivity_plus\intermediates\packaged_res\debug
+com.mohammad_alameri_soft.manage_malaebna.app-packaged_res-55 E:\My Project\manage_malaebna\build\flutter_native_splash\intermediates\packaged_res\debug
+com.mohammad_alameri_soft.manage_malaebna.app-packaged_res-56 E:\My Project\manage_malaebna\build\flutter_plugin_android_lifecycle\intermediates\packaged_res\debug
+com.mohammad_alameri_soft.manage_malaebna.app-packaged_res-57 E:\My Project\manage_malaebna\build\geocoding_android\intermediates\packaged_res\debug
+com.mohammad_alameri_soft.manage_malaebna.app-packaged_res-58 E:\My Project\manage_malaebna\build\geolocator_android\intermediates\packaged_res\debug
+com.mohammad_alameri_soft.manage_malaebna.app-packaged_res-59 E:\My Project\manage_malaebna\build\google_maps_flutter_android\intermediates\packaged_res\debug
+com.mohammad_alameri_soft.manage_malaebna.app-packaged_res-60 E:\My Project\manage_malaebna\build\image_picker_android\intermediates\packaged_res\debug
+com.mohammad_alameri_soft.manage_malaebna.app-packaged_res-61 E:\My Project\manage_malaebna\build\package_info_plus\intermediates\packaged_res\debug
+com.mohammad_alameri_soft.manage_malaebna.app-packaged_res-62 E:\My Project\manage_malaebna\build\path_provider_android\intermediates\packaged_res\debug
+com.mohammad_alameri_soft.manage_malaebna.app-packaged_res-63 E:\My Project\manage_malaebna\build\permission_handler_android\intermediates\packaged_res\debug
+com.mohammad_alameri_soft.manage_malaebna.app-packaged_res-64 E:\My Project\manage_malaebna\build\sentry_flutter\intermediates\packaged_res\debug
+com.mohammad_alameri_soft.manage_malaebna.app-packaged_res-65 E:\My Project\manage_malaebna\build\shared_preferences_android\intermediates\packaged_res\debug
+com.mohammad_alameri_soft.manage_malaebna.app-packaged_res-66 E:\My Project\manage_malaebna\build\sqflite_android\intermediates\packaged_res\debug
+com.mohammad_alameri_soft.manage_malaebna.app-packaged_res-67 E:\My Project\manage_malaebna\build\url_launcher_android\intermediates\packaged_res\debug
