@@ -1,0 +1,11 @@
+workflows:
+  free-ios-build:
+    name: Free iOS Development Build
+    environment:
+      flutter: "stable" # or your exact version
+    scripts:
+      - flutter pub get
+      - flutter build ipa --export-method development --obfuscate --split-debug-info
+      - cp ios/exportOptions.plist build/ios/ipa/
+    artifacts:
+      - build/ios/ipa/*.ipa
