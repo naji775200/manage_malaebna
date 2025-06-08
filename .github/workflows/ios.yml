@@ -8,6 +8,7 @@ on:
 jobs:
   build:
     runs-on: macos-latest
+    timeout-minutes: 30
     
     steps:
       - name: Checkout code
@@ -22,9 +23,9 @@ jobs:
       - name: Install dependencies
         run: |
           flutter pub get
-          cd ios && pod install && cd ..
+          cd ios && pod install --repo-update && cd ..
           
-      - name: Build IPA
+      - name: Build IPA (Development)
         run: |
           flutter clean
           flutter build ipa \
@@ -33,14 +34,17 @@ jobs:
             --obfuscate \
             --split-debug-info=./debug_info \
             --release
-            
+          
+          # Verify IPA exists
           if [ ! -f "build/ios/ipa/Runner.ipa" ]; then
             echo "::error::IPA file not generated!"
+            ls -la build/ios/ipa/
             exit 1
           fi
           
-      - name: Upload artifact
-        uses: actions/upload-artifact@v3
+      - name: Upload IPA artifact
+        uses: actions/upload-artifact@v4 # Updated to v4
         with:
-          name: Runner.ipa
+          name: Runner-IPA
           path: build/ios/ipa/Runner.ipa
+          retention-days: 7
