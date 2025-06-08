@@ -4,8 +4,9 @@ workflows:
     environment:
       flutter: "stable" # or your exact version
     scripts:
+      - flutter clean
       - flutter pub get
-      - flutter build ipa --export-method development --obfuscate --split-debug-info
+      - flutter build ipa --export-method development --obfuscate --split-debug-info=./debug_info
       - cp ios/exportOptions.plist build/ios/ipa/
     artifacts:
       - build/ios/ipa/*.ipa
