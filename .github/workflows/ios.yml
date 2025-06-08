@@ -25,23 +25,17 @@ jobs:
           flutter pub get
           cd ios && pod install --repo-update && cd ..
           
-      - name: Build unsigned XCArchive
+      - name: Build unsigned app
         run: |
           flutter clean
-          flutter build ipa \
-            --export-method development \
-            --no-codesign \
-            --obfuscate \
-            --split-debug-info=./debug_info \
-            --release
+          flutter build ios --no-codesign --release --verbose
           
-          # Manually create IPA from xcarchive
-          mkdir -p build/ios/ipa
-          xcodebuild -exportArchive \
-            -archivePath build/ios/archive/Runner.xcarchive \
-            -exportPath build/ios/ipa \
-            -exportOptionsPlist ios/exportOptions.plist \
-            -allowProvisioningUpdates
+          # Create IPA manually
+          mkdir -p build/ios/ipa/Payload
+          cp -r build/ios/iphoneos/Runner.app build/ios/ipa/Payload/
+          cd build/ios/ipa
+          zip -r Runner.ipa Payload
+          cd ../../../
           
           if [ ! -f "build/ios/ipa/Runner.ipa" ]; then
             echo "::error::IPA file not generated!"
